@@ -49,18 +49,18 @@ export default class calculadora extends Component {
     super(props);
     this.state = {r:'0'};
   }
-  btn(b) { //LIMPAR C e =
+  btn(b) {  
     let s = this.state;
 
-    if (b == 'C') {//limpar
+    if (b == 'C') {//limpa 
       s.r ='0';
     }else if (b == '=') {
-      s.r = eval (s.r) ;//funcao executa  JS uma String
+      s.r = eval (s.r) ;//funcao executa  JS em uma String
     }else {
-      if(s.r =='0') { //// remover quando ficar 0
-        s.r = b; // sera oque ele digitou
+      if(s.r =='0') { //remove em 0
+        s.r = b;  
       }else {
-        s.r += b; // adicionar
+        s.r += b; // add na frente
       }
     }
     this.setState(s);
