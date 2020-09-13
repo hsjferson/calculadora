@@ -52,7 +52,7 @@ export default class calculadora extends Component {
   btn(b) {  
     let s = this.state;
 
-    if (b == 'C') {//limpa 
+    if (b == 'C') {//limpar 
       s.r ='0';
     }else if (b == '=') {
       s.r = eval (s.r) ;//funcao executa  JS em uma String
@@ -60,7 +60,7 @@ export default class calculadora extends Component {
       if(s.r =='0') { //remove em 0
         s.r = b;  
       }else {
-        s.r += b; // add na frente
+        s.r += b; // adiciona na frente
       }
     }
     this.setState(s);
