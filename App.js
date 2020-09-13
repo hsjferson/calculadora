@@ -17,7 +17,7 @@ class Botao extends Component {
     if(props.bg) {
       bg = props.bg;
     }
-    //style
+     
     this.styles = StyleSheet.create({
       area: {
         flex:c,
@@ -28,7 +28,7 @@ class Botao extends Component {
         backgroundColor:bg
       },
       text: {
-        fontSize:18,
+        fontSize:19,
         fontWeight:'bold',
         color:'#575555'
       }
