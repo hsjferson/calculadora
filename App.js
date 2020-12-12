@@ -13,7 +13,7 @@ class Botao extends Component {
     if(props.c) {
       c= parseInt(props.c);
     }
-    let bg = '#e0e0e0';
+    let bg = '#333';
     if(props.bg) {
       bg = props.bg;
     }
@@ -22,17 +22,18 @@ class Botao extends Component {
       area: {
         flex:c,
         justifyContent:'center',
-        
+        borderRadius:70, 
         alignItems:'center',
         borderWidth:1,
-        borderColor:'#999',
+        margin:5,
+        borderColor:'#424242', 
 
         backgroundColor:bg
       },
-      text: {
-        fontSize:19,
-        fontWeight:'bold',
-        color:'#575555'
+      text: { 
+        color:'#eee',
+        fontSize:30,
+        fontWeight:'bold', 
       }
     });
   }
@@ -70,7 +71,7 @@ export default class calculadora extends Component {
     render() {
       return( 
           <View style ={styles.container} > 
-            <View style ={styles.linha} >
+            <View style ={styles.linhaRes} >
               <Text style ={styles.res}>{this.state.r}</Text>
             </View>
             <View style ={styles.linha} >  
@@ -108,22 +109,26 @@ export default class calculadora extends Component {
     
 
 const styles = StyleSheet.create({
-  container: {
-    padding:10, 
+  container: { 
+    backgroundColor:"#000",
     paddingTop:20, 
-    flex:1
+    flex:1, 
   },
   linha: {
     flex:1,
-    flexDirection:'row'
+    flexDirection:'row', 
+    margin:10
+     
 
   },
-  res: {
-    backgroundColor:'#000',
+  linhaRes: {
+    flex:1
+  },
+  res: { 
+    backgroundColor:'#000', 
     color:'#fff',
-    fontSize:50, 
+    fontSize:50,  
     flex:1,
-    textAlign:'right',
-    padding:10,
+    textAlign:'right', 
   }
 });
