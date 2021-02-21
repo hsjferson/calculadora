@@ -55,15 +55,15 @@ export default class calculadora extends Component {
   btn(b) {  
     let s = this.state;
 
-    if (b == 'C') {//limpar 
+    if (b == 'C') { 
       s.r ='0';
     }else if (b == '=') {
-      s.r = eval (s.r) ;//funcao executa  JS em uma String
+      s.r = eval (s.r) ; 
     }else {
-      if(s.r =='0') { //remove em 0
+      if(s.r =='0') {  
         s.r = b;  
       }else {
-        s.r += b; // adiciona na frente
+        s.r += b;  
       }
     }
     this.setState(s);
